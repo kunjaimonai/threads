@@ -1,0 +1,11 @@
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+tzdata==2025.3
+ultralytics==8.3.252
+ultralytics-thop==2.0.18
+urllib3==2.6.3
+uvicorn==0.40.0
+Werkzeug==3.1.5
+yolov5==7.0.14
+yolov8==0.0.2
+anomalib==2.2.0
