@@ -6,12 +6,6 @@ VeriKicks is a **high-end forensic AI system** designed to authenticate sneakers
 
 ---
 
-## 1. 📌 Project Title
-
-**VeriKicks – AI-Powered Sneaker Authentication**
-
----
-
 ## 2. 📄 Basic Details
 
 ### 👥 Team Information
