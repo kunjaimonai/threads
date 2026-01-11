@@ -1,0 +1,9 @@
+{
+  "/api/analyze/box/route": "app/api/analyze/box/route.js",
+  "/api/analyze/combined/route": "app/api/analyze/combined/route.js",
+  "/api/analyze/sneaker/route": "app/api/analyze/sneaker/route.js",
+  "/api/analyze/video/route": "app/api/analyze/video/route.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/page": "app/page.js",
+  "/results/page": "app/results/page.js"
+}
