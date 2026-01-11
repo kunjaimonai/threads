@@ -1,9 +1,172 @@
-👟 VeriKicks: AI-Powered Sneaker AuthenticationVeriKicks is a high-end forensic engine designed to verify the authenticity of sneakers using Computer Vision and Machine Learning. By analyzing specific "Trinity" photos (Label, Tag, and Profile) and 3-second "rub test" videos, the platform distinguishes between genuine leather and synthetic PVC replicas with high precision.3. Technical Details 🛠️Tech StackFrontend: Next.js 14, TypeScript, Tailwind CSS, Lucide React (Icons).Backend: FastAPI (Python), Uvicorn (ASGI Server).Database: PostgreSQL (for "Golden DB" reference data).Libraries & AI ModelsYOLOv8: Used for real-time visual object detection and structural geometry extraction of the shoe.OpenCV: Handles image preprocessing, HSV masking for label isolation, and video frame extraction.Pytesseract (OCR): Extracts SKU, size, and manufacturing data from box and insole labels.Pyzbar: Scans UPC/EAN barcodes for digital verification against a global database.CNN-LSTM (Future): Planned for temporal video analysis of material friction (Leather vs. PVC).Implementation BriefThe backend employs a multi-layered forensic approach. It first validates the digital signature via barcode scanning, then performs adaptive thresholding on labels to ensure high-accuracy OCR. Finally, it uses YOLOv8 to confirm structural authenticity, providing a "Genuine" or "Anomaly" verdict based on confidence scores.4. Installation & Execution 🚀PrerequisitesNode.js 18+ & Python 3.10+Tesseract OCR Engine installed on your systemA Virtual Environment (venv) for Python dependenciesStep 1: Backend Setup (FastAPI)Bashcd verikicks-backend
+# 👟 VeriKicks
+
+### AI-Powered Sneaker Authentication Engine
+
+VeriKicks is a **high-end forensic AI system** designed to authenticate sneakers by analyzing visual, textual, and material-level evidence. Using Computer Vision, OCR, and Machine Learning, VeriKicks detects counterfeit footwear with high precision by examining **label data, structural geometry, barcodes, and material behavior**.
+
+---
+
+## 1. 📌 Project Title
+
+**VeriKicks – AI-Powered Sneaker Authentication**
+
+---
+
+## 2. 📄 Basic Details
+
+### 👥 Team Information
+
+* **Team Name:** ForDevz
+* **Team Members:**
+
+  * Sreeramachandran S Menon
+  * Ravish R B
+  * V S Yadu Krishnan
+  * Abhisek Arjunan Pillai
+
+### 🧵 Track / Theme
+
+**AI & Fashion Personalization**
+
+---
+
+### ❓ Problem Statement
+
+The global sneaker resale market suffers heavily from **high-quality counterfeit products**, especially premium sneakers. Manual authentication is expensive, subjective, and does not scale.
+
+---
+
+### 💡 Solution Overview
+
+VeriKicks provides an **automated AI-driven sneaker authentication platform** that verifies shoes using:
+
+* Visual structure analysis
+* OCR-based label verification
+* Barcode & SKU validation
+* Material friction analysis via short videos
+
+The system delivers a **clear “Genuine” or “Anomaly” verdict** with confidence scores.
+
+---
+
+### 📝 Project Description
+
+VeriKicks uses a **multi-layer forensic pipeline** built on Computer Vision and Machine Learning. Users upload three mandatory **“Trinity” images**:
+
+1. **Label Image**
+2. **Tag Image**
+3. **Profile Image**
+
+Optionally, users upload a **3-second “rub test” video** to analyze material behavior (leather vs PVC).
+The backend validates digital authenticity, extracts text and barcodes, analyzes shoe geometry, and aggregates results into a final verdict.
+
+---
+
+## 3. 🛠️ Technical Details
+
+### 🔧 Tech Stack
+
+#### Frontend
+
+* **Next.js 14**
+* **TypeScript**
+* **Tailwind CSS**
+* **Lucide React (Icons)**
+
+#### Backend
+
+* **FastAPI (Python)**
+* **Uvicorn (ASGI Server)**
+
+#### Database
+
+* **PostgreSQL**
+
+  * Stores “Golden DB” reference sneaker metadata (SKU, labels, barcodes)
+
+---
+
+### 📚 Libraries & AI Models
+
+* **YOLOv8**
+
+  * Structural geometry extraction and visual object detection
+* **OpenCV**
+
+  * Image preprocessing, adaptive thresholding, HSV masking
+  * Video frame extraction for material analysis
+* **Pytesseract (OCR)**
+
+  * Extracts SKU, size, manufacturing details from labels
+* **Pyzbar**
+
+  * Decodes UPC / EAN barcodes for digital verification
+* **CNN-LSTM (Planned)**
+
+  * Temporal video analysis for leather vs PVC friction behavior
+
+---
+
+### ⚙️ Implementation Brief
+
+1. **Barcode Validation**
+
+   * UPC/EAN scanned and cross-verified against reference databases
+2. **OCR Pipeline**
+
+   * Adaptive thresholding and HSV masking improve text accuracy
+3. **Structural Verification**
+
+   * YOLOv8 validates sneaker proportions and geometry
+4. **Material Analysis (Optional)**
+
+   * Short rub-test video analyzed for friction patterns
+5. **Final Verdict**
+
+   * Aggregated confidence score → **Genuine / Anomaly**
+
+---
+
+## 4. 🚀 Installation & Execution
+
+### ✅ Prerequisites
+
+* **Node.js 18+**
+* **Python 3.10+**
+* **Tesseract OCR Engine**
+* **Python Virtual Environment (venv)**
+
+---
+
+### 🔙 Backend Setup (FastAPI)
+
+```bash
+cd verikicks-backend
 python -m venv venv
-source venv/bin/activate  # Windows: .\venv\Scripts\activate
+source venv/bin/activate        # Windows: .\venv\Scripts\activate
 pip install -r requirements.txt
 fastapi dev main.py
-Step 2: Frontend Setup (Next.js)Bashcd verikicks-frontend
+```
+
+Backend runs at:
+
+```
+http://localhost:8000
+```
+
+---
+
+### 🔜 Frontend Setup (Next.js)
+
+```bash
+cd verikicks-frontend
 npm install
 npm run dev
-5. Deployment / Live Website 🌐Frontend: Deployed on Vercel.Backend: Deployed on Render or as a Vercel Serverless Function.Live URL: [Coming Soon / Insert Link Here]6. Screenshots 📸Selection & Upload InterfaceAI Analysis ResultsStep 1: Selecting the model and uploading 'Trinity' media.Final Verdict: Displaying confidence scores and OCR data.7. Demo Video 🎥Click here to watch the VeriKicks Demo(Optional: A 2-minute walkthrough of the authentication process from upload to result.)
+```
+
+Frontend runs at:
+
+```
+http://localhost:3000
+```
+
